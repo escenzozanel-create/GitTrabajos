@@ -4,12 +4,13 @@
 <link rel="stylesheet" href="style.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog de Tecnología</title>
+<title>¿IA el futuro de la Programación?</title>
 </head>
 <body>
 <article>
 <header>
 <h1>El futuro de la IA</h1>
+<img src="imagen.webp" alt="IA futurista">
 <small>Publicado el 30 de Abril</small>
 </header>
 </article>
@@ -24,8 +25,9 @@ programación de formas increíbles...</p>
         mientras que la tecnología evoluciona hacia modelos más pequeños, eficientes y accesibles (low-code/no-code)
          que democratizan su uso. A nivel global, la IA no está “reemplazando la programación”, sino moviendo el centro de gravedad de cómo se crea software.</p>
 </div>
-<div class="txt1">
-    <p>🌍 1. De “escribir código” a “dirigir sistemas”
+<button class="boton">🌍 1. De “escribir código” a “dirigir sistemas” </button>
+<div class="contenido txt1">
+    <p>
 
 Antes, programar era principalmente:
 
@@ -39,9 +41,9 @@ revisar, ajustar y guiar lo que se genera
 
 👉 El valor se desplaza de teclear código a tomar decisiones técnicas.</p>
 </div>
-<div class="txt2">
-    <p>⚙️ 2. Abstracción cada vez más alta
-
+<button class="boton">⚙️ 2. Abstracción cada vez más alta</button>
+<div class="contenido txt2">
+    <p>
 Históricamente la programación siempre subió niveles:
 
 binario → ensamblador
@@ -51,9 +53,9 @@ ahora → IA que genera partes completas
 
 👉 La IA es otro salto de abstracción: reduce lo “mecánico”.</p>
 </div>
-<div class="txt3">
-    <p>🧠 3. Democratización del desarrollo
-
+<button class="boton">🧠 3. Democratización del desarrollo </button>
+<div class="contenido txt3">
+    <p>
 Antes necesitabas:
 
 años de experiencia
@@ -66,9 +68,9 @@ sin ser expertas en todo desde el inicio
 
 👉 Eso amplía muchísimo la base de creadores de software.</p>
 </div>
-<div class="txt4">
-    <p>🏗️ 4. Cambia el tipo de habilidades valiosas
-
+<button class="boton">🏗️ 4.Cambia el tipo de habilidades valiosas </button>
+<div class="contenido txt4">
+    <p>
 Lo que empieza a valer más:
 
 diseño de sistemas
@@ -82,10 +84,9 @@ Y menos:
 recordar sintaxis exacta
 escribir boilerplate repetitivo</p>
 </div>
-<div class="txt5">
+<button class="boton">⚡ 5.Aceleración extrema del desarrollo </button>
+<div class="contenido txt5">
     <p>
-        ⚡ 5. Aceleración extrema del desarrollo
-
 La consecuencia más fuerte:
 
 👉 lo que antes tomaba semanas ahora puede tomar horas
@@ -98,10 +99,9 @@ más experimentación
 más software creado en general
     </p>
 </div>
-<div class="txt6">
+<button class="boton">⚠️ 6.Nuevos riesgos </button>
+<div class="contenido txt6">
     <p>
-        ⚠️ 6. Nuevos riesgos
-
 No es solo positivo:
 
 código generado sin entenderse (deuda técnica)
@@ -112,10 +112,9 @@ saturación de software mediocre
 👉 Por eso el criterio humano sigue siendo clave.
     </p>
 </div>
-<div class="txt7">
+<button class="boton">🔮 7. Hacia dónde va todo esto</button>
+<div class="contenido txt7">
     <p>
-        🔮 7. Hacia dónde va todo esto
-
 La tendencia global no es “IA reemplaza programadores”, sino:
 
 👉 programadores + IA = nueva forma de construir software
@@ -127,7 +126,8 @@ frameworks
 cloud
     </p>
 </div>
-<div class="cierre">
+<button class="boton">🔮 Conclusiones </button>
+<div class="contenido cierre">
     <p>
         En conclusión, la inteligencia artificial no está reemplazando la programación, sino evolucionando la forma en que se construye software.
 
@@ -137,5 +137,24 @@ En ese sentido, la programación no desaparece, sino que se vuelve más abstract
     </p>
 </div>
 </article>
+<script>
+const botones = document.querySelectorAll(".boton");
+
+botones.forEach((boton) => {
+    boton.addEventListener("click", () => {
+
+        const contenido = boton.nextElementSibling;
+
+        document.querySelectorAll(".contenido").forEach((c) => {
+            if (c !== contenido) {
+                c.classList.remove("mostrar");
+            }
+        });
+
+        contenido.classList.toggle("mostrar");
+    });
+});
+</script>
+
 </body>
 </html>
